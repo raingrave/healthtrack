@@ -1,0 +1,26 @@
+1 - Registrar Usuário
+        - Cadastrar usuário com nome, email, senha, calorias meta semanal, peso meta.
+
+2 - Autenticar Usuário
+        - Realizar login do usuário com email e senha
+
+3 - Gerenciar Refeições
+        - Listar refeições
+        - Cadastrar refeições nome, calorias, horário da início e  horário de fim
+        - Editar refeições 
+        - Excluir refeições
+
+4 - Gerenciar Atividades Físicas
+        - Lista atividades físicas
+        - Cadastrar refeições nome, calorias, horário de início e horário de fim
+        - Editar Atividades Físicas 
+        - Excluir Atividades Físicas
+
+5 - Listar Metas Semanais
+        - Caloria total ingerida x caloria cadastrada como meta no registro de usuário
+        - Peso definido como meta x peso atual registrado
+
+6 - Lista próxima refeição
+        - Exibir a próxima refeição baseado no horário atual x o horários cadastrados
+7 - Lista próxima atividade física
+        - Exibir a próxima atividade física baseado no horário atual x horário cadastrado

@@ -1,0 +1,94 @@
+
+body {
+    background-color: #42B5B8;
+}
+
+input {
+    background-color: #fcffff;
+    border-radius: 0 !important;
+}
+
+button {
+    background-color: #555555 !important;
+    border-radius: 0 !important;
+    border: none !important;
+}
+
+.btn-back {
+    font-size: 2.2rem;
+    color: #fcffff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #555555 !important;
+}
+
+.btn-back:active, .btn-back:hover {
+    color: #fcffff;
+}
+
+.btn-back > i {
+    margin: -10px 0 10px 15px;
+}
+
+.page-title {
+    color: #fcffff;
+    margin-top: 6px;
+}
+
+.card-list {
+    background-color: #555555 !important;
+    border-radius: 0 !important;
+    border: none !important;
+}
+
+.main-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #fcffff;
+}
+
+.sub-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #fcffff;
+}
+
+@media (max-width: 768px) {
+    .menu-bottom {
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        margin-bottom: -15px;
+    }
+}
+
+.item-home {
+    background-color: #555555 !important;
+    border-radius: 0 !important;
+    border: none !important;
+    font-size: 1.6em;
+}
+
+.btn-register {
+    background-color: #2c4a76;
+    border: none;
+    border-radius: 0;
+    color: #fff;
+}
+
+.btn-register:hover {
+    color: #ccc;
+}
+
+.btn-create {
+    border: none;
+    border-radius: 0;
+    background-color: #2c4a76;
+}
+
+.btn-create:hover {
+    background-color: #395277;
+}
