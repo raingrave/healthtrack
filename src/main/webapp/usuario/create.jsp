@@ -9,17 +9,20 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link href="assets/libs/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Healthtrack</title>
   </head>
   <body>
   		<%
          	String mensagemSucesso = (String) session.getAttribute("sucesso");
+  		
+  			String mensagemErro = (String) session.getAttribute("erro");
         
      		PrintWriter output = response.getWriter();
      		
      		session.removeAttribute("sucesso");
+     		session.removeAttribute("erro");
         	
         %>
     <div class="container">
@@ -38,9 +41,31 @@
 		       			<% out.println(mensagemSucesso); %>
 		    		</div>
 	    		<% } %>
+	    		
+	    		<% if (mensagemErro != null) { %>
+		       		<div class="alert alert-danger">
+		       			<% out.println(mensagemErro); %>
+		    		</div>
+	    		<% } %>
     		</div>
         </div>
         <form action="<% out.print(request.getContextPath() + "/registrar-usuario"); %>" method="post">
+        	<div class="row justify-content-md-center">
+                <div class="col-md-6 col-xs-4 mb-3">
+                    <div class="form-check form-check-inline">
+					  <input class="form-check-input" type="radio" name="genero" value="MASCULINO">
+					  <label class="form-check-label" for="Masculino">Masculino</label>
+					</div>
+					<div class="form-check form-check-inline">
+					  <input class="form-check-input" type="radio" name="genero" value="FEMININO">
+					  <label class="form-check-label" for="Feminino">Feminino</label>
+					</div>
+					<div class="form-check form-check-inline">
+					  <input class="form-check-input" type="radio" name="genero" value="OUTRO">
+					  <label class="form-check-label" for="Outro">Outro</label>
+					</div>
+                </div>
+            </div>
             <div class="row justify-content-md-center">
                 <div class="col-md-6 col-xs-4 mb-3">
                     <input name="nome" class="form-control form-control-lg" type="text" placeholder="Digite seu nome">
@@ -53,16 +78,22 @@
             </div>
             <div class="row justify-content-md-center">
                 <div class="col-md-6 col-xs-4 mb-3">
-                    <input name="senha" class="form-control form-control-lg" type="text" placeholder="Digite sua senha">
+                    <input name="idade" class="form-control form-control-lg" type="text" placeholder="Digite sua idade">
                 </div>
             </div>
             <div class="row justify-content-md-center">
-                <h4 class="text-white">Metas Iniciais</h4>
                 <div class="col-md-6 col-xs-4 mb-3">
-                    <input class="form-control form-control-lg" type="text" placeholder="Digite suas meta de calorias Ex: 8.000">
+                    <input name="senha" class="form-control form-control-lg" type="password" placeholder="Digite sua senha">
                 </div>
+            </div>
+            <div class="row justify-content-md-center">
                 <div class="col-md-6 col-xs-4 mb-3">
-                    <input class="form-control form-control-lg" type="text" placeholder="Digite sua meta de peso Ex: 64,5">
+                    <input name="peso" class="form-control form-control-lg" type="text" placeholder="Digite seu peso atual">
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-md-6 col-xs-4 mb-3">
+                    <input name="altura" class="form-control form-control-lg" type="text" placeholder="Digite sua altura">
                 </div>
             </div>
             <div class="row justify-content-md-center">
